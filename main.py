@@ -1,12 +1,14 @@
 import openai
 import streamlit as st
 from streamlit_chat import message
-# import <FILE NAME>
+import pyttsx3
+import string
+from speakKosbie import speak
 
 
 currentMessage = 'hello'
 
-openai.api_key = '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'
+openai.api_key = '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'
 if 'prompts' not in st.session_state:
     st.session_state['prompts'] = [{"role": "system", "content": "You are a helpful assistant. Answer as concisely as possible with a little humor expression."}]
 if 'generated' not in st.session_state:
@@ -36,17 +38,18 @@ def chat_click():
         output=generate_response(chat_input)
         #generated response
         currentMessage = output
-        # st.title(output)
-        # st.title(currentMessage)
-        # print(output)
+        # make the voice mp3 available
         #store the output
+        st.image("https://www.dropbox.com/s/3419xb8smyrvox9/kozgif.gif?raw=1", width=1000)
         st.session_state['past'].append(chat_input)
         st.session_state['generated'].append(output)
         st.session_state['prompts'].append({"role": "assistant", "content": output})
         st.session_state['user'] = ""
+        speak(currentMessage)
 
-st.image("https://www.kosbie.net/cmu/dkosbie.png", width=80)
-st.title("my big boy")
+st.title("KozBot")
+st.subheader("talk to him, he's nice")
+st.image("https://www.dropbox.com/s/r3czt57qldw122g/dkosbie.png?raw=1", width=300)
 
 user_input=st.text_input("You:", key="user")
 
@@ -61,4 +64,6 @@ if st.session_state['generated']:
         with tab2:
             st.markdown(st.session_state['generated'][i])
         message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
+
+
 
