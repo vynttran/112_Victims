@@ -2,7 +2,7 @@
 Hack112 Spring 2023 Project
 __________________________________________
 
-Description of your project: A chatbot that (attempts to) convert text-to-speech the answers from ChatGPT using Professor Kosbie's voice and face. 
+Description of your project: A chatbot that (attempts to) convert text-to-speech the answers from ChatGPT using a voice and Professor Kosbie's face.
 
 Modules the user would have to install to run your program: 
   - openai
