@@ -11,4 +11,8 @@ Modules the user would have to install to run your program:
   - pyttsx3
 
 Which file to run to start your program: main.py 
-https://www.geeksforgeeks.org/text-to-speech-changing-voice-in-python/?ref=lbp
+
+References:
+- https://www.geeksforgeeks.org/text-to-speech-changing-voice-in-python/?ref=lbp
+- https://docs.streamlit.io/library/api-reference/media/st.audio
+- https://medium.com/@gpj/making-your-ai-sound-like-you-a-guide-to-creating-custom-text-to-speech-8b595d5cf259 
