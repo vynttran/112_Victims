@@ -8,7 +8,7 @@ from speakKosbie import speak
 
 currentMessage = 'hello'
 
-openai.api_key = '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'
+openai.api_key = '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'
 if 'prompts' not in st.session_state:
     st.session_state['prompts'] = [{"role": "system", "content": "You are a helpful assistant. Answer as concisely as possible with a little humor expression."}]
 if 'generated' not in st.session_state:
