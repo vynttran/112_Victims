@@ -11,3 +11,4 @@ Modules the user would have to install to run your program:
   - pyttsx3
 
 Which file to run to start your program: main.py 
+https://www.geeksforgeeks.org/text-to-speech-changing-voice-in-python/?ref=lbp
